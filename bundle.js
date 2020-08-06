@@ -5,7 +5,6 @@ function palindromeTester() {
   let string = prompt("Please enter a string for palindrome testing:");
   let phrase = new Phrase(string);
   let palindromeResult = document.querySelector("#palindromeResult");
-  
 
   if (phrase.palindrome()) {
     palindromeResult.innerHTML = `"${phrase.content}" is a palindrome!`;
@@ -13,20 +12,13 @@ function palindromeTester() {
     palindromeResult.innerHTML = `"${phrase.content}" is not a palindrome.`;
   }
 }
+
 document.addEventListener("DOMContentLoaded", function() {
-  let form = document.querySelector("#palindromeTester");
-  
-  form.addEventListener("submit", function() {
-  palindromeTester();
-  
-  
+  let button = document.querySelector("#palindromeTester");
+  button.addEventListener("click", function() {
+    palindromeTester();
   });
 });
-
-
-
-
-
 },{"kpietrzyk-palindrome":2}],2:[function(require,module,exports){
 module.exports = Phrase;
 
